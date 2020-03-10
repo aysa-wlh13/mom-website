@@ -1,5 +1,5 @@
 module.exports = {
-    //get
+    //get//
     getInfo: async(req, res) => {
         console.log(req.session.user)
 
@@ -10,7 +10,7 @@ module.exports = {
         res.status(200).send(userInfo);
     },
 
-    //post
+    //post//
     addInfo: async(req, res) => {
         const db = req.app.get ('db')
 
@@ -22,7 +22,7 @@ module.exports = {
         res.status(200).send(newInfo);
     },
 
-    //put
+    //put//
     editInfo: (req, res) => {
         const {info} = req.body
 
@@ -35,7 +35,7 @@ module.exports = {
         })
     },
 
-    //delete
+    //delete//
     deleteInfo: (req, res) => {
         const db = req.app.get('db')
 
