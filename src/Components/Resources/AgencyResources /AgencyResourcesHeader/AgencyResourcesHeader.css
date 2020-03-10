@@ -1,0 +1,35 @@
+.agency-resources-header-top {
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(255, 117, 4, 0.582);
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+    align-content: stretch; */
+    
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.agency-resources-button-container{
+    height: 5vh;
+    width: 40vw;
+    border: 2px solid black;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}

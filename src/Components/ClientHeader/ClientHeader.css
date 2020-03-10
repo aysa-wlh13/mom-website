@@ -1,0 +1,35 @@
+.clientHeader-top {
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(237, 240, 87, 0.664);
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+    align-content: stretch; */
+    
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.client-button-container{
+    height: 5vh;
+    width: 5vw;
+    border: 2px solid black;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}

@@ -1,0 +1,35 @@
+.eyes-header-top {
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(4, 255, 150, 0.514);
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+    align-content: stretch; */
+    
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.eye-button-container{
+    height: 5vh;
+    width: 45vw;
+    border: 2px solid black;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
