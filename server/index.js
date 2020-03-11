@@ -10,6 +10,8 @@ const authCtrl = require('./controllers/authController')
 
 const infoCtrl = require('./controllers/infoController');
 
+const cCtrl = require('./controllers/clientsController');
+
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET}=process.env
 
 const app = express();
@@ -62,6 +64,11 @@ app.post('/auth/user', authCtrl.getUser);
     //delete
     app.delete('/api/deleteInfo/:users1_id', infoCtrl.deleteInfo);
 
+
+//////////////////////////////////////////////////////
+//display-clients
+//get
+app.get('/api/getClients', cCtrl.getClients);
 
 //////////////////////////////////////////////////////
 //Stripe
