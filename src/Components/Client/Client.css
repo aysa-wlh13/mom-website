@@ -1,3 +1,21 @@
 .Client-page{
     margin-top: 80px;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.name-container{
+    width: 15vw;
+    border: 2px solid black;
+    margin-bottom: 25px;
+    display: flex;
+	justify-content: center;
+}
+
+.dropDownArrow-style{
+    border: none;
+    /* background-color: black; */
+    margin-top: 8px;
+    width: 15px;
 }

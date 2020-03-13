@@ -9,5 +9,17 @@ module.exports = {
         }).catch(err => {
             res.sendStatus(500)
         })
+    },
+
+    getInfo: (req, res) => {
+        const db = req.app.get('db');
+        const {users1_id} = req.params
+        console.log(req.session)
+        db.get_info(users1_id).then(result => {
+            res.status(200).send(result)
+        }).catch(err => {
+            res.sendStatus(500)
+        })
     }
 };
+

@@ -70,5 +70,8 @@ app.post('/auth/user', authCtrl.getUser);
 //get
 app.get('/api/getClients', cCtrl.getClients);
 
+//get
+app.get('/api/getInfo/:users1_id', cCtrl.getInfo);
+
 //////////////////////////////////////////////////////
 //Stripe
