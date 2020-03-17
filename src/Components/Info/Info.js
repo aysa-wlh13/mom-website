@@ -16,6 +16,13 @@ class Info extends Component {
         this.getInfo(this.props.users1_id);
     }
 
+    //handle input
+        handleInput(prop, value) {
+            this.setState({
+              [prop]: value
+            });
+          }
+
     getInfo = (id) => {
         axios.get(`/api/getInfo/${id}`).then(res => {
             this.setState({
@@ -32,6 +39,19 @@ class Info extends Component {
                 {this.state.info.map(el =>{
                     return <div className='sentence'>
                                 {el.info}
+
+                                <section>
+                                    <button>
+
+                                    </button>
+                                </section>
+
+                                <article>
+                                    <button>
+
+                                    </button>
+                                </article>
+
                            </div>
                 })}
             </div>

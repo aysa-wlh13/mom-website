@@ -13,9 +13,27 @@
 	justify-content: center;
 }
 
+.drop-x-container{
+    /* border: 1px solid black; */
+    width: 7vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-between;
+}
+
 .dropDownArrow-style{
     border: none;
     /* background-color: black; */
     margin-top: 8px;
     width: 15px;
+    /* border: 1px red; */
+
+}
+
+.delete{
+    border: none;
+    /* border: 1px blue; */
 }

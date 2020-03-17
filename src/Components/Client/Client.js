@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Client.css'
 import ClientHeader from '../ClientHeader/ClientHeader';
 import dropDownArrow from './dropDownArrow.png';
+import xs from './xs.png';
 import axios from 'axios';
 
 import Info from '../Info/Info';
@@ -30,6 +31,16 @@ class Client extends Component {
         })
     }
 
+    //update
+
+
+    //delete
+    deleteClient = id => {
+        axios.delete(`/api/deleteInfo/${id}`).then(res => {
+            this.getClients();
+        })
+    }
+
     render(){
         console.log(this.state.client)
         let client = this.state.client.map(
@@ -37,6 +48,8 @@ class Client extends Component {
                 <section>
                     <div className='name-container'>
                         <h1>{el.firstname} {el.lastname}</h1>
+
+                    <section className='drop-x-container'>
                         <button
                         onClick={() => {}}
                         className='dropDownArrow-style'>
@@ -45,7 +58,19 @@ class Client extends Component {
                             alt='dropDownArrow'
                             height='17'/>
                         </button>
+
+                        <button className='delete'
+                        
+                        onClick={() => this.deleteClient(el.users1_id)}>
+                            <img
+                            src={xs}
+                            alt='delete'
+                            height='17'/>
+                        </button>
+                    </section> 
+                        
                     </div>
+
                     <Info users1_id = {el.users1_id}/>
                 </section> 
             )
