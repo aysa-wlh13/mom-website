@@ -12,6 +12,8 @@ const infoCtrl = require('./controllers/infoController');
 
 const cCtrl = require('./controllers/clientsController');
 
+const stCtrl = require('./controllers/stripeController');
+
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET}=process.env
 
 const app = express();
@@ -75,3 +77,4 @@ app.get('/api/getInfo/:users1_id', cCtrl.getInfo);
 
 //////////////////////////////////////////////////////
 //Stripe
+app.post('/api/payment',stCtrl.pay);
