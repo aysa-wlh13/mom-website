@@ -66,11 +66,25 @@ class Info extends Component {
             text
         } = this.state;
         axios
-        .post(`/api/editInfo/${id}`, {
+        .put(`/api/editInfo/${id}`, {
             info: text
         })
         .then(res => {
-            this.getInfo();
+            this.getInfo(this.props.match.params.users1_id);
+        })
+    }
+
+    //cancel
+    cancelUpdate = (id,index) => {
+        const {
+            text
+        } = this.state;
+        axios
+        .put(`/api/editInfo/${id}`, {
+            info: this.state.info[index].info
+        })
+        .then(res => {
+            this.getInfo(this.props.match.params.users1_id);
         })
     }
 
@@ -113,7 +127,7 @@ class Info extends Component {
 
                             <button className='cancel-but'
                             onClick={() => {
-                                this.updateInfo(this.props.el.text_id)
+                                this.cancelUpdate(el.text_id,index)
                                 this.toggleInfo()
                             }}>
                                 <img
@@ -123,7 +137,9 @@ class Info extends Component {
                             </button>
 
                             <button className='save-but'
-                            onClick={this.toggleInfo}>
+                            onClick={()=> {
+                                this.updateInfo(el.text_id)
+                                this.toggleInfo()}}>
                                 <img
                                 src={save}
                                 alt='save'
