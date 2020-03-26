@@ -5,18 +5,20 @@ module.exports = {
 
         const db = req.app.get ('db')
 
-        const userInfo = await db.get_info([req.session.user.users1_id])
+        const {users1_id} = req.params
+
+        const userInfo = await db.get_info([users1_id])
 
         res.status(200).send(userInfo);
     },
 
     //post//
     addInfo: async(req, res) => {
-        const db = req.app.get ('db')
+        const db = req.app.get('db')
 
         const {info} = req.body;
 
-        const {users1_id} = req.session.user
+        const {users1_id} = req.params
         let newInfo = await db.add_info([users1_id, info])
 
         res.status(200).send(newInfo);

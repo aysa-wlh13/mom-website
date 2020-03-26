@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
 import './Client.css'
 import ClientHeader from '../ClientHeader/ClientHeader';
-import dropDownArrow from './dropDownArrow.png';
 import xs from './xs.png';
 import axios from 'axios';
 
-import Info from '../Info/Info';
+import { Link } from 'react-router-dom';
 
 class Client extends Component {
     constructor(){
         super()
 
         this.state = {
-            client:[]
+            client:[],
+            listOpen: false
         }
     }
 
     componentDidMount(){
         this.getClients();
     }
-
 
 
     getClients = () => {
@@ -42,22 +41,28 @@ class Client extends Component {
     }
 
     render(){
-        console.log(this.state.client)
+
+        console.log(this.state.listOpen)
         let client = this.state.client.map(
-            (el,i) => (
+            (el,i) => {
+            //     let listOpen = false
+            //    function handleArrowClick  () {
+            //           listOpen = !listOpen
+                      
+            //       }
+            
+                return(
                 <section>
                     <div className='name-container'>
                         <h1>{el.firstname} {el.lastname}</h1>
 
                     <section className='drop-x-container'>
-                        <button
-                        onClick={() => {}}
-                        className='dropDownArrow-style'>
-                            <img 
-                            src={dropDownArrow}
-                            alt='dropDownArrow'
-                            height='17'/>
+                        <Link to={`/info/${el.users1_id}`}>
+                        <button>
+                            info
                         </button>
+                        </Link>
+
 
                         <button className='delete'
                         
@@ -71,9 +76,10 @@ class Client extends Component {
                         
                     </div>
 
-                    <Info users1_id = {el.users1_id}/>
+         
+
                 </section> 
-            )
+            )}
         )
 
         return(

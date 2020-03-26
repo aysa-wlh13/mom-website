@@ -6,6 +6,7 @@ import ClientRegistration from './Components/ClientRegistration/ClientRegistrati
 import Home from './Components/Home/Home';
 import CommunityResources from './Components/CommunityResources/CommunityResources';
 import Client from './Components/Client/Client';
+import Info from './Components/Info/Info';
 import Stripe from './Components/Stripe/Stripe';
 import Dental from './Components/Resources/Dental/Dental';
 import Education from './Components/Resources/Education/Education';
@@ -25,6 +26,7 @@ export default (
         <Route path='/home' component={Home}/>
         <Route path='/com-res' component={CommunityResources}/>
         <Route path='/client' component={Client}/>
+        <Route path='/info/:users1_id' component={Info}/>
         <Route path='/donate' component={Stripe}/>
         <Route path='/agency-res' component={AgencyResources}/>
         <Route path='/dental' component={Dental}/>

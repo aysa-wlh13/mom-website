@@ -53,10 +53,10 @@ app.post('/auth/user', authCtrl.getUser);
 //////////////////////////////////////////////////////
 //info
     //get
-    app.get('/api/getInfo', infoCtrl.getInfo);
+    app.get('/api/getInfo/:users1_id', infoCtrl.getInfo);
 
     //post
-    app.post('/api/addInfo', infoCtrl.addInfo);
+    app.post('/api/addInfo/:users1_id', infoCtrl.addInfo);
 
     //put
     app.put('/api/editInfo/:text_id', infoCtrl.editInfo);

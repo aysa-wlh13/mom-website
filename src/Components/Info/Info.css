@@ -1,9 +1,26 @@
+.info-page{
+    /* margin-top: 80px; */
+    /* display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; */
+}
+
 .info-style{
-    width: 15vw;
-    border: 2px solid grey;
+    width: 19vw;
+    border: 2px solid black;
     margin-bottom: 10px;
 }
 
 .sentence{
-    margin-bottom: 13px;
+    /* margin-bottom: 13px; */
+    border: 1px solid grey;
+}
+
+.edit-style{
+    border: none;
+}
+
+.add-style{
+    border: none;
+
 }

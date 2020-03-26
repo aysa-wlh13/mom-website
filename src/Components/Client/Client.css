@@ -14,8 +14,8 @@
 }
 
 .drop-x-container{
-    /* border: 1px solid black; */
-    width: 7vw;
+    border: 1px solid black;
+    width: 10vw;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -25,15 +25,15 @@
 }
 
 .dropDownArrow-style{
-    border: none;
+    /* border: none; */
     /* background-color: black; */
     margin-top: 8px;
     width: 15px;
-    /* border: 1px red; */
+    border: 1px red;
 
 }
 
 .delete{
-    border: none;
-    /* border: 1px blue; */
+    /* border: none; */
+    border: 1px blue;
 }

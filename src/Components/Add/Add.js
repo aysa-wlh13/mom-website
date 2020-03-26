@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import axios from "axios";
+
 
 class Add extends Component {
     constructor() {
         super()
 
         this.state = {
-
+            info: ''
         }
     }
 
@@ -17,6 +19,18 @@ class Add extends Component {
       }
 
     //add
+    addInfo = () => {
+        const {
+            info
+        } = this.state;
+        axios
+        .post('/api/addInfo', {
+            info
+        })
+        .then(res => {
+            this.getInfo();
+        })
+    }
 
 
     render(){
